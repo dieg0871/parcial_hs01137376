@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas en Vue.js</title>
+</head>
+<body>
+    <div id="app5">
+        <div>
+            <input v-model="nuevaTarea" type="text" placeholder="Nueva tarea...">
+            <button @click="agregarTarea">Agregar Tarea</button>
+        </div>
+        <ul>
+            <li v-for="(tarea, indice) in listaDeTareas" :key="indice">
+                {{ tarea }}
+                <button @click="eliminarTarea(indice)">Eliminar</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Cargar Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Cargar el archivo JavaScript con la lógica Vue.js -->
+    <script src="./vue.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas en Vue.js</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./vue.js" defer></script>
+    <style>
+        /* Estilos para el tema claro */
+        body.claro {
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilos para el tema oscuro */
+        body.oscuro {
+            background-color: #333333;
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilos para el botón */
+        .toggle-button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="claro">
+    <div id="app7">
+        <button class="toggle-button" @click="alternarTema">
+            Cambiar a {{ temaOscuro ? 'Tema Claro' : 'Tema Oscuro' }}
+        </button>
+        <h1>¡Pagina para cambiar de temas!</h1>
+    </div>
+</body>
+</html>
